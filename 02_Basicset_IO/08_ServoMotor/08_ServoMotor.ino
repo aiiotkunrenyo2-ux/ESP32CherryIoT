@@ -9,14 +9,14 @@ void setup() {
 }
 
 void loop() {
-  // 0-180 right
-  for(int angle = 0; angle <= 180; angle++) {                        
+  // 0-90 right
+  for(int angle = 0; angle <= 90; angle++) {                        
     myservo.write(angle);
-    delay(15);
+    delay(5);
   }
-  // 180-0  left 
-  for(int angle = 180; angle >= 0; angle--) {                 
+  // 90-0  left 
+  for(int angle = 90; angle >= 0; angle--) {                 
     myservo.write(angle);  
-    delay(15);      
+    delay(5);      
   }
 }
