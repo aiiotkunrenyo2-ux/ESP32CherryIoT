@@ -14,17 +14,6 @@ const int spkrPin = 3; //3:ConnectorA 4:ConnectorB
 #define TI 493.883
 #define octDO 523.251
 
-void playmusic(){
-  ledcWriteTone(spkrPin, DO);
-  delay(250);
-  ledcWriteTone(spkrPin, RE);
-  delay(250);
-  ledcWriteTone(spkrPin, MI);
-  delay(250);
-  ledcWriteTone(spkrPin, 0); // no sound
-  delay(250);
-}
-
 void setup() {
   pinMode(spkrPin, OUTPUT);
   ledcAttach(spkrPin, 12000, 8); //Pin setting(Pin num, Max frequency, Resolution)
@@ -32,5 +21,34 @@ void setup() {
 
 void loop() {
   playmusic();
+  delay(3000);
+}
+void playmusic(){
+  ledcWriteTone(spkrPin, SO);
+  delay(300);
+  ledcWriteTone(spkrPin, MI);
+  delay(300);
+  ledcWriteTone(spkrPin, MI);
+  delay(500);
+  ledcWriteTone(spkrPin, FA);
+  delay(300);
+  ledcWriteTone(spkrPin, RE);
+  delay(300);
+  ledcWriteTone(spkrPin, RE);
+  delay(500);
+  ledcWriteTone(spkrPin, DO);
+  delay(300);
+  ledcWriteTone(spkrPin, RE);
+  delay(300);
+  ledcWriteTone(spkrPin, MI);
+  delay(300);
+  ledcWriteTone(spkrPin, FA);
+  delay(300);
+  ledcWriteTone(spkrPin, SO);
+  delay(300);
+  ledcWriteTone(spkrPin, SO);
+  delay(300);
+  ledcWriteTone(spkrPin, SO);
+  delay(300);
   delay(3000);
 }
