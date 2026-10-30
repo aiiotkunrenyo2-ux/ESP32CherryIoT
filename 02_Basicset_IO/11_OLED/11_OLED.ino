@@ -21,12 +21,12 @@ void setup()
 
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE);
-  display.setCursor(0, 5);
-  display.print(F("Hello"));
-  display.setCursor(0, 25);
-  display.print(F("ESP32"));
+  display.setCursor(0, 2);
+  display.print(F("ESP32o"));
+  display.setCursor(0,20);
+  display.print(("CherryIoT"));
   display.setCursor(0, 45);
-  display.print(F("CherryIoT"));
+  display.print(F("Hello"));
 
   display.display();
 }
