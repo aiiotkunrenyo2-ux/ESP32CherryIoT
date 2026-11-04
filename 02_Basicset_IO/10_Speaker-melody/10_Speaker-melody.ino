@@ -1,6 +1,4 @@
-const int touchPin = 3; //3:ConnectorA 4:ConnectorB
-const int spkrPin = 4;
-
+const int spkrPin = 3; //3:ConnectorA 4:ConnectorB
 
 #define BEAT 230
 #define DO 261.6
@@ -103,19 +101,12 @@ void fryer(){
 }
 
 void setup() {
-  Serial.begin(115200);
-  pinMode(touchPin, INPUT);
-  pinMode(spkrPin,OUTPUT);
-
+  pinMode(spkrPin, OUTPUT);
   ledcAttach(spkrPin, 12000, 8); //Pin setting(Pin num, Max frequency, Resolution)
 }
 
 void loop() {
-   if (digitalRead(touchPin)==HIGH) {
-    Serial.println("Touch!");
-    laymusic();
-  } else {
-    Serial.println("...");
-  }
-  delay(500);
+  doremi();
+  melodychime();
+  fryer();
 }
